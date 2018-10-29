@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'prsng';
 
   constructor(user: UserService) {
-    user.list().subscribe(resp => { console.log(resp);});
+    user.get(1).subscribe(resp => { console.log(resp);});
   }
 }

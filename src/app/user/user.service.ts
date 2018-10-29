@@ -17,7 +17,7 @@ export class UserService {
   }
 
   get(id): Observable<JsonResponse> {
-    return this.http.get(url + 'Get') as Observable<JsonResponse>;
+    return this.http.get(url + 'Get/' + id) as Observable<JsonResponse>;
   }
   constructor(private http: HttpClient) { }
 }
