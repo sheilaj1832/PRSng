@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { User } from './user.class';
-import {JsonResponse } from '../util/json-response.class';
+import { JsonResponse } from '../util/json-response.class';
 
 const url = "http://localhost:8080/Users/";
 
@@ -19,5 +19,14 @@ export class UserService {
   get(id): Observable<JsonResponse> {
     return this.http.get(url + 'Get/' + id) as Observable<JsonResponse>;
   }
-  constructor(private http: HttpClient) { }
+  add(user: User): Observable<JsonResponse> {
+    return this.http.post(url + 'Add', user) as Observable<JsonResponse>;
+  }
+  change(user: User): Observable<JsonResponse> {
+    return this.http.post(url + 'Change', user) as Observable<JsonResponse>;
+  }
+  remove(user: User): Observable<JsonResponse> {
+    return this.http.post(url + 'Remove', user) as Observable<JsonResponse>;
+  }  
+    constructor(private http: HttpClient) { }
 }
