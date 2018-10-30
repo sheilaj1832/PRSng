@@ -5,12 +5,18 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 
+import { MenuComponent } from './menu/menu/menu.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+
 const routes: Routes = [
   {path: '', redirectTo: '/users/list', pathMatch: 'full'},
   {path: 'users/list', component: UserListComponent },
   {path: 'users/add', component: UserAddComponent },
   {path: 'users/detail/:id', component: UserDetailComponent },
   {path: 'users/edit/:id', component: UserEditComponent },
+  {path: 'home', component: HomeComponent },
+  {path: 'about', component: AboutComponent },
   {path: '**', component: UserListComponent }
 ];
 

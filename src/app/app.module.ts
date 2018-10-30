@@ -9,6 +9,9 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { MenuComponent } from './menu/menu/menu.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
     UserListComponent,
     UserDetailComponent,
     UserAddComponent,
-    UserEditComponent
+    UserEditComponent,
+    MenuComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
