@@ -1,6 +1,6 @@
 <div class="component">
   <div>
-    <span class="page-title">User Add</span>
+    <span class="page-title">User Edit</span>
   </div>
 
   <div class='container form' *ngIf="user">
@@ -67,19 +67,34 @@
         </div>
     </div>
     <div class='form-group row'>
-        <label class='col-form-label col-sm-2'>IsReviewer: </label>
+        <label class='col-form-label col-sm-2'>Email:</label>
         <div class='col-sm-8'>
-          <input [(ngModel)]='user.isReviewer' class='form-control' type='checkbox' name='isReviewer'
-            #isReviewer='ngModel'>
+          
+          <input [(ngModel)]="user.email" class='form-control' type='text' name='email'
+            #email='ngModel' required minlength='3'>
+        </div>
+        <div *ngIf='email.invalid && userName.touched' class='col-form-label col=sm-2 text-danger'>
+          <label *ngIf='email?.errors.required'>Required</label>
+          <label *ngIf='email?.errors.minlength'>3 chars min</label>
+        </div>
+    </div>
+    <div class='form-group row'>
+        <label class='col-form-label col-sm-2'>Reviewer: </label>
+        <div class='col-sm-8'>
+          <input [(ngModel)]='user.reviewer' class='form-control' type='checkbox' name='reviewer'
+            #reviewer='ngModel'>
         </div>
     </div> 
     <div class='form-group row'>
-        <label class='col-form-label col-sm-2'>IsAdmin: </label>
+        <label class='col-form-label col-sm-2'>Admin: </label>
         <div class='col-sm-8'>
-          <input [(ngModel)]='user.isAdmin' class='form-control' type='checkbox' name='isAdmin'
-            #isAdmin='ngModel'>
+          <input [(ngModel)]='user.admin' class='form-control' type='checkbox' name='admin'
+            #admin='ngModel'>
         </div>
-    </div>   
+    </div>  
+    <div>
+      <button class='btn btn-primary' (click)='save()'>Save</button>
+    </div> 
   </div>
 
 

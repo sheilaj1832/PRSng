@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { UserService } from '../user.service';
+import { User } from '../user.class';
 
 @Component({
   selector: 'app-user-add',
@@ -7,7 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserAddComponent implements OnInit {
 
-  constructor() { }
+  user: User = new User();
+
+  save(): void {
+    this.usersvc.add(this.user)
+      .subscribe(resp => {
+        console.log('resp', resp);
+        this.router.navigateByUrl('/user/list');
+      })
+  }
+  constructor(
+    private usersvc: UserService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
   }
