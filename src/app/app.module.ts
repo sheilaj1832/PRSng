@@ -9,14 +9,16 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
-import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
-import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { BoolDisplayPipe } from './pipes/bool-display.pipe';
+import { SortUsersPipe } from './pipes/sort-users.pipe';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
     AboutComponent,
     VendorListComponent,
     VendorDetailComponent,
-    VendorCreateComponent,
+    VendorAddComponent,
     VendorEditComponent,
-    VendorAddComponent
+    BoolDisplayPipe,
+    SortUsersPipe,
   ],
   imports: [
     BrowserModule,

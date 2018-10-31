@@ -4,7 +4,7 @@
     <a routerLink="/users/add">Create New</a>
   </div>
 
-  <table class="table table-sm">
+  <table class="table table-sm" *ngIf = "users">
     <thead>
       <tr>
         <td>Id</td>
@@ -18,14 +18,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let user of users'>
+      <tr *ngFor='let user of users | sortUsers'>
         <td>{{ user.id }}</td>
         <td>{{ user.firstName }} {{ user.lastName }}</td>
         <td>{{ user.userName }}</td>
         <td>{{ user.phoneNumber }}</td>
         <td>{{ user.email }}</td>
-        <td>{{ user.reviewer ? "Yes" : "No"}}</td>
-        <td>{{ user.admin ? "Yes" : "No"}}</td>
+        <td>{{ user.reviewer | bool }}</td>
+        <td>{{ user.admin | bool }}</td>
 
 
         <td>
