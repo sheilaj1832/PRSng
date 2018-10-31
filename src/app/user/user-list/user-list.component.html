@@ -20,6 +20,9 @@
         <td>{{ user.id }}</td>
         <td>{{ user.firstName }} {{ user.lastName }}</td>
         <td>{{ user.userName }}</td>
+        <td>{{ user.reviewer ? "Yes" : "No"}}</td>
+        <td>{{ user.admin ? "Yes" : "No"}}</td>
+
 
         <td>
           <a routerLink='/users/detail/{{user.id}}'>Detail</a>
