@@ -58,7 +58,7 @@
           <label class="col-form-label col-sm-2">PhotoPath:</label>
           <div class="col-sm-8">
             <input [(ngModel)]="product.PhotoPath" class="form-control" type="text" name="photopath"
-              #photopath="ngModel" required minlength="8">
+              #photopath="ngModel">
           </div>
           <div *ngIf="photopath.invalid && photopath.touched" class="col-form-label col-sm-2 text-danger">
             <label *ngIf="photopath?.errors.required">Required</label>
@@ -69,8 +69,8 @@
         <div class="form-group row">
           <label class="col-form-label col-sm-2">Vendor:</label>
           <div class="col-sm-8">
-            <select [(ngModel)]="product.VendorId" class="form-control" name="zip">
-              <option *ngFor="let vendor of vendors" [ngValue]="vendor.Id">{{ vendor.name }}</option>
+            <select [(ngModel)]="product.vendorid" class="form-control" name="zip">
+              <option *ngFor="let vendor of vendors" [ngValue]="vendor.id">{{ vendor.name }}</option>
             </select>
           </div>
         </div> 

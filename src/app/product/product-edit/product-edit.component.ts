@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { ProductService } from '../product.service';
 import { Product } from '../product.class';
-import { VendorService } from '../../vendor/vendor.service'
-import { Vendor } from '../../vendor/vendor.class'
+import { VendorService } from '../../vendor/vendor.service';
+import { Vendor } from '../../vendor/vendor.class';
 
 
 @Component({
