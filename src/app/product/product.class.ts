@@ -1,4 +1,5 @@
 import { Vendor } from '../vendor/vendor.class'
+
 export class Product {
 
     id: number;
@@ -15,4 +16,4 @@ export class Product {
     }
 
 } 
-}
+
