@@ -25,7 +25,7 @@
           <input [(ngModel)]="user.firstName" class='form-control' type='text' name='firstName'
             #firstName='ngModel' required minlength='1'>
         </div>
-        <div *ngIf='firstName.invalid && userName.touched' class='col-form-label col=sm-2 text-danger'>
+        <div *ngIf='firstName.invalid && firstName.touched' class='col-form-label col=sm-2 text-danger'>
           <label *ngIf='firstName?.errors.required'>Required</label>
           <label *ngIf='firstName?.errors.minlength'>1 char min</label>
         </div>
@@ -37,7 +37,7 @@
           <input [(ngModel)]="user.lastName" class='form-control' type='text' name='lastName'
             #lastName='ngModel' required minlength='3'>
         </div>
-        <div *ngIf='lastName.invalid && userName.touched' class='col-form-label col=sm-2 text-danger'>
+        <div *ngIf='lastName.invalid && lastName.touched' class='col-form-label col=sm-2 text-danger'>
           <label *ngIf='lastName?.errors.required'>Required</label>
           <label *ngIf='lastName?.errors.minlength'>3 char min</label>
         </div>
@@ -49,7 +49,7 @@
           <input [(ngModel)]="user.password" class='form-control' type='text' name='password'
             #password='ngModel' required minlength='8'>
         </div>
-        <div *ngIf='password.invalid && userName.touched' class='col-form-label col=sm-2 text-danger'>
+        <div *ngIf='password.invalid && password.touched' class='col-form-label col=sm-2 text-danger'>
           <label *ngIf='password?.errors.required'>Required</label>
           <label *ngIf='password?.errors.minlength'>8 chars min</label>
         </div>
@@ -61,7 +61,7 @@
           <input [(ngModel)]="user.phoneNumber" class='form-control' type='text' name='phoneNumber'
             #phoneNumber='ngModel' required minlength='12'>
         </div>
-        <div *ngIf='phoneNumber.invalid && userName.touched' class='col-form-label col=sm-2 text-danger'>
+        <div *ngIf='phoneNumber.invalid && phoneNumber.touched' class='col-form-label col=sm-2 text-danger'>
           <label *ngIf='phoneNumber?.errors.required'>Required</label>
           <label *ngIf='phoneNumber?.errors.minlength'>8 chars min</label>
         </div>
@@ -73,7 +73,7 @@
           <input [(ngModel)]="user.email" class='form-control' type='text' name='email'
             #email='ngModel' required minlength='3'>
         </div>
-        <div *ngIf='email.invalid && userName.touched' class='col-form-label col=sm-2 text-danger'>
+        <div *ngIf='email.invalid && email.touched' class='col-form-label col=sm-2 text-danger'>
           <label *ngIf='email?.errors.required'>Required</label>
           <label *ngIf='email?.errors.minlength'>3 chars min</label>
         </div>

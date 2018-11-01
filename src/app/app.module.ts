@@ -19,6 +19,10 @@ import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { BoolDisplayPipe } from './pipes/bool-display.pipe';
 import { SortUsersPipe } from './pipes/sort-users.pipe';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductAddComponent } from './product/product-add/product-add.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,10 @@ import { SortUsersPipe } from './pipes/sort-users.pipe';
     VendorEditComponent,
     BoolDisplayPipe,
     SortUsersPipe,
+    ProductListComponent,
+    ProductAddComponent,
+    ProductDetailComponent,
+    ProductEditComponent,
   ],
   imports: [
     BrowserModule,
