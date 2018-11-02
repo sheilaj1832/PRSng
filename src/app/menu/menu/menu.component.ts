@@ -13,9 +13,10 @@ export class MenuComponent implements OnInit {
     new Menu('Users', '/users/list', 'The User List'),
     new Menu('Vendors', '/vendors/list', 'The Vendor List'), 
     new Menu('Products', '/products/list', 'The Product List'), 
-    new Menu('Purchase Requests', '/purchaseRequests/list', 'The Purchase Request List'), 
-
-    new Menu('About', '/about', 'The About Page')
+    new Menu('Requests', '/requests/list', 'The Purchase Request List'), 
+    new Menu('Review', '/review', 'The Review Page'),
+    new Menu('About', '/about', 'The About Page'),
+    new Menu('Login/out', '/login', 'The Login/out Page')
   ];
 
   constructor() { }

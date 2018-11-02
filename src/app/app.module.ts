@@ -25,6 +25,10 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestAddComponent } from './request/request-add/request-add.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
     ProductAddComponent,
     ProductDetailComponent,
     ProductEditComponent,
+    RequestListComponent,
+    RequestDetailComponent,
+    RequestEditComponent,
+    RequestAddComponent,
   ],
   imports: [
     BrowserModule,

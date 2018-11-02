@@ -25,6 +25,9 @@ export class ProductEditComponent implements OnInit {
       })
   }
 
+  compareFunction(v1, v2) {
+    return v1.id === v2.id;
+}
   constructor(
     private prodsvc: ProductService,
     private vendorsvc: VendorService,
@@ -42,7 +45,7 @@ export class ProductEditComponent implements OnInit {
 
       this.vendorsvc.list()
       .subscribe(resp => {
-        console.log("resp:", resp);
+        console.log('resp:', resp);
         this.vendors = resp.data;
       });
   }

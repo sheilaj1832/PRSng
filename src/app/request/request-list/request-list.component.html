@@ -1,0 +1,35 @@
+<tr>
+  <td>ID</td>
+  <td>Description</td>
+  <td>Justification</td>
+  <td>Date Needed</td>
+  <td>Delivery Mode</td>
+  <td>Status</td>
+  <td>Total</td>
+  <td>Submitted Date</td>
+  <td>Reason for Rejection</td>
+  <td>User</td>
+</tr>
+</thead>
+
+<tbody>
+<tr *ngFor='let product of products'>
+  <td>{{ product.id }}</td>
+  <td>{{ product.description }}</td>
+  <td>{{ product.justification }}</td>
+  <td>{{ product.dateNeeded }}</td>
+  <td>{{ product.deliveryMode }}</td>
+  <td>{{ product.status }}</td>
+  <td>{{ product.total }}</td>
+  <td>{{ product.submittedDate }}</td>
+  <td>{{ product.reasonForRejection }}</td>
+  <td>{{ product.user }}</td>
+
+  <td>
+    <a routerLink='/requests/detail/{{request.id}}'>Detail</a>
+    | <a routerLink='/requests/edit/{{request.id}}'>Edit</a>
+  </td> 
+</tr>
+</tbody>
+</table>
+</div>

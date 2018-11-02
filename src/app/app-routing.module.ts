@@ -11,11 +11,15 @@ import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.comp
 import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 
-
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
+
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestAddComponent } from './request/request-add/request-add.component';
 
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeComponent } from './home/home.component';
@@ -37,6 +41,11 @@ const routes: Routes = [
   {path: 'products/add', component: ProductAddComponent },
   {path: 'products/detail/:id', component: ProductDetailComponent },
   {path: 'products/edit/:id', component: ProductEditComponent },
+
+  {path: 'requests/list', component: RequestListComponent },
+  {path: 'requests/add', component: RequestAddComponent },
+  {path: 'requests/detail/:id', component: RequestDetailComponent },
+  {path: 'requests/edit/:id', component: RequestEditComponent },
 
   {path: 'home', component: HomeComponent },
   {path: 'about', component: AboutComponent },
