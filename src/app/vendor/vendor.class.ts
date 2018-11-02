@@ -8,10 +8,10 @@ export class Vendor {
     zip: number;
     phoneNumber: String;
     email: String;
-    preapproved: boolean;
+    preApproved: boolean;
 
     constructor() {
         this.id = 0;
-        this.preapproved = false;
+        this.preApproved = false;
     }
 }
