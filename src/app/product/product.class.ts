@@ -3,6 +3,7 @@ import { Vendor } from '../vendor/vendor.class'
 export class Product {
 
     id: number;
+    vendorId: string;
     partNumber: string;
     name: string;
     price: number;
