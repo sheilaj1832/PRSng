@@ -5,7 +5,6 @@
     <p *ngIf="!product">Retrieving data... this may take a while...</p>
     <table class='table table-sm' *ngIf="product">
       <tr><td>ID:</td><td>{{ product.id }}<td></tr>
-      <tr><td>Vendor ID:</td><td>{{ product.vendorId }}<td></tr>
       <tr><td>Part Number:</td><td>{{ product.partNumber }}<td></tr>
       <tr><td>Name:</td><td>{{ product.name }}<td></tr>
       <tr><td>Price:</td><td>{{ product.price }}<td></tr>

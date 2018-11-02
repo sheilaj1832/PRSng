@@ -34,8 +34,8 @@
           <label class='col-form-label col-sm-2'>Price:</label>
           <div class='col-sm-8'>
             
-            <input [(ngModel)]="product.price" class='form-control' type='text' name='price'
-              #price='ngModel' required minlength='3'>
+            <input [(ngModel)]="product.price" class='form-control' type='number' name='price'
+              #price='ngModel' >
           </div>
           <div *ngIf='price.invalid && price.touched' class='col-form-label col=sm-2 text-danger'>
             <label *ngIf='price?.errors.required'>Required</label>
@@ -69,11 +69,11 @@
         <div class="form-group row">
           <label class="col-form-label col-sm-2">Vendor:</label>
           <div class="col-sm-8">
-            <select [(ngModel)]="product.vendor" class="form-control" name="vendor"
-            #vendor='ngModel'>
+            <select [(ngModel)]="product.vendor" class="form-control" name="vendor">
               <option *ngFor="let vendor of vendors" [ngValue]="vendor">{{ vendor.name }}</option>
             </select>
           </div>
+        </div> 
         </div> 
       <div>
         <button class='btn btn-primary' (click)='save()'>Save</button>

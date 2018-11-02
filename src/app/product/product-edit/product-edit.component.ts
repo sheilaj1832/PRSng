@@ -15,7 +15,7 @@ import { Vendor } from '../../vendor/vendor.class';
 export class ProductEditComponent implements OnInit {
 
   product: Product;
-  vendor: Vendor[];
+  vendors: Vendor[];
 
   save(): void {
     this.prodsvc.change(this.product)
@@ -27,9 +27,9 @@ export class ProductEditComponent implements OnInit {
 
   constructor(
     private prodsvc: ProductService,
+    private vendorsvc: VendorService,
     private route: ActivatedRoute,
-    private router: Router,
-    private vendorsvc: VendorService
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -43,7 +43,7 @@ export class ProductEditComponent implements OnInit {
       this.vendorsvc.list()
       .subscribe(resp => {
         console.log("resp:", resp);
-        this.vendor = resp.data;
+        this.vendors = resp.data;
       });
   }
 
