@@ -1,3 +1,6 @@
+<div>
+<table>
+  <thead>
 <tr>
   <td>ID</td>
   <td>Description</td>
@@ -13,21 +16,21 @@
 </thead>
 
 <tbody>
-<tr *ngFor='let product of products'>
-  <td>{{ product.id }}</td>
-  <td>{{ product.description }}</td>
-  <td>{{ product.justification }}</td>
-  <td>{{ product.dateNeeded }}</td>
-  <td>{{ product.deliveryMode }}</td>
-  <td>{{ product.status }}</td>
-  <td>{{ product.total }}</td>
-  <td>{{ product.submittedDate }}</td>
-  <td>{{ product.reasonForRejection }}</td>
-  <td>{{ product.user }}</td>
+<tr *ngFor='let request of requests'>
+  <td>{{ request.id }}</td>
+  <td>{{ request.description }}</td>
+  <td>{{ request.justification }}</td>
+  <td>{{ request.dateNeeded }}</td>
+  <td>{{ request.deliveryMode }}</td>
+  <td>{{ request.status }}</td>
+  <td>{{ request.total }}</td>
+  <td>{{ request.submittedDate }}</td>
+  <td>{{ request.reasonForRejection }}</td>
+  <td>{{ request.user.userName }}</td>
 
   <td>
-    <a routerLink='/requests/detail/{{request.id}}'>Detail</a>
-    | <a routerLink='/requests/edit/{{request.id}}'>Edit</a>
+    <a routerLink='/purchaserequests/detail/{{request.id}}'>Detail</a>
+    | <a routerLink='/purchaserequests/edit/{{request.id}}'>Edit</a>
   </td> 
 </tr>
 </tbody>

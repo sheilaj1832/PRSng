@@ -42,10 +42,10 @@ const routes: Routes = [
   {path: 'products/detail/:id', component: ProductDetailComponent },
   {path: 'products/edit/:id', component: ProductEditComponent },
 
-  {path: 'requests/list', component: RequestListComponent },
-  {path: 'requests/add', component: RequestAddComponent },
-  {path: 'requests/detail/:id', component: RequestDetailComponent },
-  {path: 'requests/edit/:id', component: RequestEditComponent },
+  {path: 'purchaserequests/listreview', component: RequestListComponent },
+  {path: 'purchaserequests/add', component: RequestAddComponent },
+  {path: 'purchaserequests/detail/:id', component: RequestDetailComponent },
+  {path: 'purchaserequests/edit/:id', component: RequestEditComponent },
 
   {path: 'home', component: HomeComponent },
   {path: 'about', component: AboutComponent },

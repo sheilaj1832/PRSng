@@ -14,7 +14,7 @@ export class ProductDetailComponent implements OnInit {
   product: Product;
 
   delete(): void {
-    this.productsvc.remove(this.product)
+    this.prodsvc.remove(this.product)
       .subscribe(resp => {
         console.log('resp:', resp);
         this.router.navigateByUrl('/products/list');
@@ -22,7 +22,7 @@ export class ProductDetailComponent implements OnInit {
       } 
 
   constructor(
-    private productsvc: ProductService, 
+    private prodsvc: ProductService, 
     private route: ActivatedRoute,
     private router: Router
     ) { }
@@ -30,7 +30,7 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.params.id;
 
-    this.productsvc.get(id)
+    this.prodsvc.get(id)
      .subscribe(resp => {
        console.log('resp: ', resp);
        this.product = resp.data;

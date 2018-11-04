@@ -10,7 +10,7 @@ import { Request } from '../request.class'
 })
 export class RequestListComponent implements OnInit {
 
-  products: Request[];
+  requests: Request[];
 
   constructor(private requestsvc: RequestService) { }
   
@@ -18,7 +18,7 @@ export class RequestListComponent implements OnInit {
       this.requestsvc.list()
         .subscribe (resp => {
           console.log('Requests:', resp);
-          this.products = resp.data;
+          this.requests = resp.data;
   
         });
     }

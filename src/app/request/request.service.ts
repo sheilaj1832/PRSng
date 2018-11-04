@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Request } from './request.class';
 import { JsonResponse } from '../util/json-response.class';
 
-const url = 'http://localhost:8080/PurchaseRequest/';
+const url = 'http://localhost:8080/PurchaseRequests/';
 
 @Injectable({
   providedIn: 'root'
