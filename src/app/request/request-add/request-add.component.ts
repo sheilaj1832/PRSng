@@ -20,7 +20,7 @@ export class RequestAddComponent implements OnInit {
     this.requestsvc.add(this.request)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/request/list');
+        this.router.navigateByUrl('/purhaserequests/list');
       })
   }
   constructor(

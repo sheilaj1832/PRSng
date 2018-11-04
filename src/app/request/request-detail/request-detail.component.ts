@@ -17,7 +17,7 @@ export class RequestDetailComponent implements OnInit {
     this.requestsvc.remove(this.request)
       .subscribe(resp => {
         console.log('resp:', resp);
-        this.router.navigateByUrl('/requests/list');
+        this.router.navigateByUrl('/purchaserequests/list');
         });
       } 
 

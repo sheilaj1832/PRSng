@@ -9,6 +9,7 @@ ul {
 li {
     display: inline-block;
     text-align: center;
+    font-size: 14pt;
 }
 a {
     color: white;

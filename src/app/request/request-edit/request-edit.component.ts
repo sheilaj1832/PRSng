@@ -20,7 +20,7 @@ export class RequestEditComponent implements OnInit {
     this.requestsvc.change(this.request)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/request/list');
+        this.router.navigateByUrl('/purchaserequests/list');
       })
   }
 

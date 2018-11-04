@@ -42,7 +42,7 @@ const routes: Routes = [
   {path: 'products/detail/:id', component: ProductDetailComponent },
   {path: 'products/edit/:id', component: ProductEditComponent },
 
-  {path: 'purchaserequests/listreview', component: RequestListComponent },
+  {path: 'purchaserequests/list', component: RequestListComponent },
   {path: 'purchaserequests/add', component: RequestAddComponent },
   {path: 'purchaserequests/detail/:id', component: RequestDetailComponent },
   {path: 'purchaserequests/edit/:id', component: RequestEditComponent },

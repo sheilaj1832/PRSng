@@ -1,6 +1,11 @@
 <div>
-<table>
-  <thead>
+  <div>
+    <span>Purchase Request List | </span>
+    <a routerLink="/purchaserequests/add">Create New</a>
+  </div>
+
+  <table class="table table-sm" *ngIf = "requests">
+    <thead>
 <tr>
   <td>ID</td>
   <td>Description</td>
@@ -20,11 +25,11 @@
   <td>{{ request.id }}</td>
   <td>{{ request.description }}</td>
   <td>{{ request.justification }}</td>
-  <td>{{ request.dateNeeded }}</td>
+  <td>{{ request.dateNeeded | date }}</td>
   <td>{{ request.deliveryMode }}</td>
   <td>{{ request.status }}</td>
   <td>{{ request.total }}</td>
-  <td>{{ request.submittedDate }}</td>
+  <td>{{ request.submittedDate | date }}</td>
   <td>{{ request.reasonForRejection }}</td>
   <td>{{ request.user.userName }}</td>
 
