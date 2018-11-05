@@ -1,15 +1,18 @@
 <div>
   <div>
-  <span>Purchase Request Linne Item Detail</span>
+  <span>Purchase Request Line Item Detail</span>
 </div>
 <p *ngIf="!line">Retrieving data... this may take a while...</p>
 <table class='table table-sm' *ngIf="line">
   <tr><td>ID:</td><td>{{ line.id }}<td></tr>
   <tr><td>Product:</td><td>{{ line.product.name }}<td></tr>
   <tr><td>Quantity:</td><td>{{ line.quantity }}<td></tr>
-  <tr><td>Purchase Request:</td><td>{{ line.request.id }}<td></tr>
+  <tr><td>Subtotal:</td><td>{{ line.quantity * line.product.price }}<td></tr>
 </table>
 <div>
-  <button class='btn btn-danger' (click)='delete()'>Delete</button>'  
+    <button class='btn btn-warning' (click)='edit()'>Edit</button>
+    <button class='btn btn-danger' (click)='delete()'>Delete</button>
+    <a routerLink='/purchaserequests/detail/{{request.id}}'>Detail</a> 
+
 </div>
 </div>

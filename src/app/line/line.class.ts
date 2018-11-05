@@ -5,12 +5,16 @@ export class Line {
 
     id: number;
     quantity: number;
+    active: boolean;
     request: Request;
+    requestID: number;
     product: Product;
+    productID: number;
 
         constructor () {
             this.id = 0;
-            this.quantity = 0;
+            this.quantity = 1;
+            this.active = true;
 
         }
     }

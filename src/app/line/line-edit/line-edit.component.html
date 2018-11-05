@@ -1,3 +1,53 @@
-<p>
-  line-edit works!
-</p>
+<div class="component">
+    <div>
+      <span class="page-title">Line Item Edit</span>
+    </div>
+  
+    <div class='container form' *ngIf="line">
+  
+      <div class='form-group row'>
+          <label class='col-form-label col-sm-2'>Product:</label>
+          <div class='col-sm-8'>
+            
+            <input [(ngModel)]="line.product" class='form-control' type='text' name='product'
+              #product='ngModel' required minlength='5'>
+          </div>
+          <div *ngIf='product.invalid && product.touched' class='col-form-label col=sm-2 text-danger'>
+            <label *ngIf='product?.errors.required'>Required</label>
+            <label *ngIf='product?.errors.minlength'>5 char min</label>
+          </div>
+      </div>
+      <div class='form-group row'>
+          <label class='col-form-label col-sm-2'>Quantity:</label>
+          <div class='col-sm-8'>
+            
+            <input [(ngModel)]="line.quantity" class='form-control' type='number' name='quantity'
+              #quantity='ngModel' required minlength='1'>
+          </div>
+          <div *ngIf='quantity.invalid && quantity.touched' class='col-form-label col=sm-2 text-danger'>
+            <label *ngIf='quantity?.errors.required'>Required</label>
+            <label *ngIf='quantity?.errors.minlength'>Please enter a quantity</label>
+          </div>
+      </div>
+    <div class='form-group row'>
+        <label class='col-form-label col-sm-2'>Active: </label>
+        <div class='col-sm-8'>
+          <input [(ngModel)]='line.admin' class='form-control' type='checkbox' name='active'
+            #active='ngModel'>
+        </div>
+    </div>  
+  <div class='form-group row'>
+    <label class='col-form-label col-sm-2'>Subtotal:</label>
+    <div class='col-sm-8'>
+      
+      <input [(ngModel)]="line.subtotal" class='form-control' type='text' name='subtotal'
+        #subtotal='ngModel' required minlength='3'>
+    </div>
+    <div *ngIf='subtotal.invalid && subtotal.touched' class='col-form-label col=sm-2 text-danger'>
+      <label *ngIf='subtotal?.errors.required'>Required</label>
+      <label *ngIf='subtotal?.errors.minlength'>3 char min</label>
+    </div>
+      <div>
+        <button class='btn btn-primary' (click)='save()'>Save</button>
+      </div> 
+    </div>

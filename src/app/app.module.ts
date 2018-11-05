@@ -35,6 +35,7 @@ import { LineAddComponent } from './line/line-add/line-add.component';
 import { LineDetailComponent } from './line/line-detail/line-detail.component';
 import { LineEditComponent } from './line/line-edit/line-edit.component';
 import { LineListComponent } from './line/line-list/line-list.component';
+import { LoginComponent } from './user/login/login.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { LineListComponent } from './line/line-list/line-list.component';
     LineDetailComponent,
     LineEditComponent,
     LineListComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
