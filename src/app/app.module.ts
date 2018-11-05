@@ -30,6 +30,10 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestAddComponent } from './request/request-add/request-add.component';
+import { LineAddComponent } from './line/line-add/line-add.component';
+import { LineDetailComponent } from './line/line-detail/line-detail.component';
+import { LineEditComponent } from './line/line-edit/line-edit.component';
+import { LineListComponent } from './line/line-list/line-list.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +59,10 @@ import { RequestAddComponent } from './request/request-add/request-add.component
     RequestDetailComponent,
     RequestEditComponent,
     RequestAddComponent,
+    LineAddComponent,
+    LineDetailComponent,
+    LineEditComponent,
+    LineListComponent,
   ],
   imports: [
     BrowserModule,

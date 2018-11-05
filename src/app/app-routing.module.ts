@@ -21,6 +21,11 @@ import { RequestDetailComponent } from './request/request-detail/request-detail.
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestAddComponent } from './request/request-add/request-add.component';
 
+import { LineAddComponent } from './line/line-add/line-add.component';
+import { LineDetailComponent } from './line/line-detail/line-detail.component';
+import { LineEditComponent } from './line/line-edit/line-edit.component';
+import { LineListComponent } from './line/line-list/line-list.component';
+
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -47,6 +52,10 @@ const routes: Routes = [
   {path: 'purchaserequests/detail/:id', component: RequestDetailComponent },
   {path: 'purchaserequests/edit/:id', component: RequestEditComponent },
 
+  {path: 'purchaserequestlineitems/list', component: LineListComponent },
+  {path: 'purchaserequestlineitems/add', component: LineAddComponent },
+  {path: 'purchaserequestlineitems/detail/:id', component: LineDetailComponent },
+  {path: 'purchaserequestlineitems/edit/:id', component: LineEditComponent },
   {path: 'home', component: HomeComponent },
   {path: 'about', component: AboutComponent },
   {path: '**', component: UserListComponent }
