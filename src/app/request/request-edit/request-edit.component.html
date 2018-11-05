@@ -5,7 +5,19 @@
 
   <div class='container form' *ngIf="request">
 
-    <div class='form-group row'>
+      <div class='form-group row'>
+          <label class='col-form-label col-sm-2'>ID:</label>
+          <div class='col-sm-8'>
+            
+            <input [(ngModel)]="request.id" class='form-control' type='number' name='id'
+              #id='ngModel' disabled required minlength='1'>
+          </div>
+          <div *ngIf='id.invalid && id.touched' class='col-form-label col=sm-2 text-danger'>
+            <label *ngIf='id?.errors.required'>Required</label>
+            <label *ngIf='id?.errors.minlength'>1 chars min</label>
+          </div>
+        </div>
+      <div class='form-group row'>
       <label class='col-form-label col-sm-2'>Description:</label>
       <div class='col-sm-8'>
         

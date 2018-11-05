@@ -21,7 +21,7 @@ export class ProductAddComponent implements OnInit {
     this.prodsvc.add(this.product)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/product/list');
+        this.router.navigateByUrl('/products/list');
       })
   }
   constructor(

@@ -17,7 +17,7 @@ export class UserAddComponent implements OnInit {
     this.usersvc.add(this.user)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/user/list');
+        this.router.navigateByUrl('/users/list');
       })
   }
   constructor(

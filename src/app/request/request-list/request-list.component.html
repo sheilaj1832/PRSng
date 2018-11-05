@@ -28,7 +28,7 @@
   <td>{{ request.dateNeeded | date }}</td>
   <td>{{ request.deliveryMode }}</td>
   <td>{{ request.status }}</td>
-  <td>{{ request.total }}</td>
+  <td>{{ request.total | currency }}</td>
   <td>{{ request.submittedDate | date }}</td>
   <td>{{ request.reasonForRejection }}</td>
   <td>{{ request.user.userName }}</td>
@@ -36,7 +36,7 @@
   <td>
     <a routerLink='/purchaserequests/detail/{{ request.id }}'>Detail</a>
     | <a routerLink='/purchaserequests/edit/{{ request.id }}'>Edit</a>
-    | <a routerLink='/purchaserequestlineitems/list/{{ request.id }}'>Lines</a> 
+    | <a routerLink='purchaserequestlineitems/list{{ request.id }}'>Lines</a> 
   </td> 
 </tr>
 </tbody>

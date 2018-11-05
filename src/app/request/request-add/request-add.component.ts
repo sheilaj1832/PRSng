@@ -30,11 +30,10 @@ export class RequestAddComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-      this.usersvc.list()
-        .subscribe(resp => {
-          console.log("Users:", resp);
-          this.users = resp.data;
-        });
+      if(!this.usersvc.isLoggedIn) {
+        this.router.navigateByUrl('/users/login');
+      }
+      this.request.userID = this.sys.user.Id;
   }
 
 }

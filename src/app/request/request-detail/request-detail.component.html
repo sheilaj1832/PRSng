@@ -7,7 +7,7 @@
   <tr><td>ID:</td><td>{{ request.id }}<td></tr>
   <tr><td>Description:</td><td>{{ request.description }}<td></tr>
   <tr><td>Justification:</td><td>{{ request.justification }}<td></tr>
-  <tr><td>*ngIf='request.reasonForRejection'</td><td>Reason for Rejection:</td><td>{{ request.reasonForRejection }}</td></tr>
+  <tr *ngIf='request.reasonForRejection'><td>Reason for Rejection:</td><td>{{ request.reasonForRejection }}</td></tr>
   <tr><td>Delivery Mode:</td><td>{{ request.deliveryMode }}<td></tr>
   <tr><td>Submitted Date</td><td>{{ request.submittedDate | date : medium }}<td></tr>
   <tr><td>Date Needed:</td><td>{{ request.dateNeeded | date }}<td></tr>

@@ -17,7 +17,7 @@ export class VendorAddComponent implements OnInit {
     this.vendorsvc.add(this.vendor)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/vendor/list');
+        this.router.navigateByUrl('/vendors/list');
       })
   }
   constructor(
