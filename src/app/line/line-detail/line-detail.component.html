@@ -1,3 +1,15 @@
-<p>
-  line-detail works!
-</p>
+<div>
+  <div>
+  <span>Purchase Request Linne Item Detail</span>
+</div>
+<p *ngIf="!line">Retrieving data... this may take a while...</p>
+<table class='table table-sm' *ngIf="line">
+  <tr><td>ID:</td><td>{{ line.id }}<td></tr>
+  <tr><td>Product:</td><td>{{ line.product.name }}<td></tr>
+  <tr><td>Quantity:</td><td>{{ line.quantity }}<td></tr>
+  <tr><td>Purchase Request:</td><td>{{ line.request.id }}<td></tr>
+</table>
+<div>
+  <button class='btn btn-danger' (click)='delete()'>Delete</button>'  
+</div>
+</div>

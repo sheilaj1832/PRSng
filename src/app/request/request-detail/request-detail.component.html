@@ -13,7 +13,7 @@
   <tr><td>Total</td><td>{{ request.total }}<td></tr>   
   <tr><td>Submitted Date</td><td>{{ request.submittedDate | date : medium }}<td></tr>
   <tr><td>Reason for Rejection</td><td>{{ request.reasonForRejection }}<td></tr> 
-  <tr><td>User</td><td>{{ request.user }}<td></tr>   
+  <tr><td>User</td><td>{{ request.user.userName }}<td></tr>   
 </table>
 <div>
   <button class='btn btn-danger' (click)='delete()'>Delete</button>'  

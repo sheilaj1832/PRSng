@@ -1,3 +1,31 @@
-<p>
-  line-list works!
-</p>
+<div>
+  <div>
+    <span>Purchase Request Line Item List | </span>
+    <a routerLink="/purchaserequestlineitems/add">Create New</a>
+  </div>
+
+  <table class="table table-sm" *ngIf = "lines">
+    <thead>
+<tr>
+  <td>ID</td>
+  <td>Product</td>
+  <td>Quantity</td>
+  <td>Purchase Request</td>
+</tr>
+</thead>
+
+<tbody>
+<tr *ngFor='let line of lines'>
+  <td>{{ line.id }}</td>
+  <td>{{ line.product.name }}</td>
+  <td>{{ line.quantity }}</td>
+  <td>{{ line.request.id }}</td>
+
+  <td>
+    <a routerLink='/purchaserequestlineitems/detail/{{request.id}}'>Detail</a>
+    | <a routerLink='/purchaserequestlineitems/edit/{{request.id}}'>Edit</a>
+  </td> 
+</tr>
+</tbody>
+</table>
+</div>
