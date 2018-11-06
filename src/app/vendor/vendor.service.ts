@@ -25,7 +25,7 @@ export class VendorService {
     return this.http.post(url + 'Change', vendor) as Observable<JsonResponse>;
   }
   remove(vendor:Vendor): Observable<JsonResponse> {
-    return this.http.post(url + 'Delete', vendor) as Observable<JsonResponse>;
+    return this.http.post(url + 'Remove', vendor) as Observable<JsonResponse>;
   }
 
   constructor(private http: HttpClient) { }

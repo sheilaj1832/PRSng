@@ -20,7 +20,7 @@ export class RequestAddComponent implements OnInit {
     this.requestsvc.add(this.request)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/purhaserequests/list');
+        this.router.navigateByUrl('/purchaserequests/list');
       })
   }
   constructor(
@@ -30,10 +30,11 @@ export class RequestAddComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-      if(!this.usersvc.isLoggedIn) {
-        this.router.navigateByUrl('/users/login');
-      }
-      this.request.userID = this.sys.user.Id;
-  }
-
+      this.usersvc.list()
+        .subscribe(resp => {
+          console.log('Users:', resp);
+          this.users = resp.data;
+          this.request.user = this.users[0];
+          });
 }
+  }

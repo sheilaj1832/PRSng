@@ -16,7 +16,7 @@ export class VendorEditComponent implements OnInit {
     this.vendorsvc.change(this.vendor)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/vendor/list');
+        this.router.navigateByUrl('/vendors/list');
       })
   }
 

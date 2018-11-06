@@ -21,7 +21,7 @@ export class ProductEditComponent implements OnInit {
     this.prodsvc.change(this.product)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/product/list');
+        this.router.navigateByUrl('/products/list');
       })
   }
 

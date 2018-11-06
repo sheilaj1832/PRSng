@@ -7,7 +7,7 @@
   <tr><td>ID:</td><td>{{ line.id }}<td></tr>
   <tr><td>Product:</td><td>{{ line.product.name }}<td></tr>
   <tr><td>Quantity:</td><td>{{ line.quantity }}<td></tr>
-  <tr><td>Subtotal:</td><td>{{ line.quantity * line.product.price }}<td></tr>
+  <tr><td>Subtotal:</td><td>{{ line.quantity * line.product.price  | currency }}<td></tr>
 </table>
 <div>
     <button class='btn btn-warning' (click)='edit()'>Edit</button>

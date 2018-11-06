@@ -14,6 +14,7 @@ export class VendorAddComponent implements OnInit {
   vendor: Vendor = new Vendor();
 
   save(): void {
+    console.log("Vendor:", this.vendor);
     this.vendorsvc.add(this.vendor)
       .subscribe(resp => {
         console.log('resp', resp);

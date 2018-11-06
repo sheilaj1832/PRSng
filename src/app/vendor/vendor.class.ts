@@ -1,13 +1,13 @@
 export class Vendor {
     id: number;
-    code: String;
-    name: String;
-    address: String;
-    city: String;
-    state: String;
+    code: string;
+    name: string;
+    address: string;
+    city: string;
+    state: string;
     zip: number;
-    phoneNumber: String;
-    email: String;
+    phoneNumber: string;
+    email: string;
     preApproved: boolean;
 
     constructor() {

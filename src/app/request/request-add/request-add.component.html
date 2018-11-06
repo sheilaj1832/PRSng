@@ -1,15 +1,15 @@
-<div class="component">
+<div class='component'>
   <div>
-    <span class="page-title">Purchase Request Add</span>
+    <span class='page-title'>Purchase Request Add</span>
   </div>
 
-  <div class='container form' *ngIf="request">
+  <div class='container form' *ngIf='request'>
 
       <div class='form-group row'>
           <label class='col-form-label col-sm-2'>ID:</label>
           <div class='col-sm-8'>
             
-            <input [(ngModel)]="request.id" class='form-control' type='number' name='id'
+            <input [(ngModel)]='request.id' class='form-control' type='number' name='id'
               #id='ngModel' disabled>
           </div>
           <div *ngIf='id.invalid && id.touched' class='col-form-label col=sm-2 text-danger'>
@@ -20,7 +20,7 @@
           <label class='col-form-label col-sm-2'>Description:</label>
           <div class='col-sm-8'>
             
-            <input [(ngModel)]="request.description" class='form-control' type='text' name='description'
+            <input [(ngModel)]='request.description' class='form-control' type='text' name='description'
               #description='ngModel' required minlength='3'>
           </div>
           <div *ngIf='description.invalid && description.touched' class='col-form-label col=sm-2 text-danger'>
@@ -33,7 +33,7 @@
         <label class='col-form-label col-sm-2'>Justification:</label>
         <div class='col-sm-8'>
           
-          <input [(ngModel)]="request.justification" class='form-control' type='text' name='justification'
+          <input [(ngModel)]='request.justification' class='form-control' type='text' name='justification'
             #justification='ngModel' required minlength='5'>
         </div>
         <div *ngIf='justification.invalid && justification.touched' class='col-form-label col=sm-2 text-danger'>
@@ -45,7 +45,7 @@
         <label class='col-form-label col-sm-2'>Date Needed:</label>
         <div class='col-sm-8'>
           
-          <input [(ngModel)]="request.dateNeeded" class='form-control' type='text' name='dateNeeded'
+          <input [(ngModel)]='request.dateNeeded' class='form-control' type='date' name='dateNeeded'
             #dateNeeded='ngModel' required minlength='3'>
         </div>
         <div *ngIf='dateNeeded.invalid && dateNeeded.touched' class='col-form-label col=sm-2 text-danger'>
@@ -57,7 +57,7 @@
         <label class='col-form-label col-sm-2'>Delivery Mode:</label>
         <div class='col-sm-8'>
           
-          <input [(ngModel)]="request.deliveryMode" class='form-control' type='text' name='deliveryMode'
+          <input [(ngModel)]='request.deliveryMode' class='form-control' type='text' name='deliveryMode'
             #deliveryMode='ngModel' required minlength='2'>
         </div>
         <div *ngIf='deliveryMode.invalid && deliveryMode.touched' class='col-form-label col=sm-2 text-danger'>
@@ -68,7 +68,7 @@
     <div class='form-group row'>
         <label class='col-form-label col-sm-2'>Status:</label>
         <div class='col-sm-8'>
-          <input [(ngModel)]="request.status" class='form-control' type='text' name='status'
+          <input [(ngModel)]='request.status' class='form-control' type='text' name='status'
             #status='ngModel' disabled required minlength='5'>
         </div>
         <div *ngIf='status.invalid && status.touched' class='col-form-label col=sm-2 text-danger'>
@@ -79,7 +79,7 @@
  <div class='form-group row'>
         <label class='col-form-label col-sm-2'>Total:</label>
         <div class='col-sm-8'>
-          <input [(ngModel)]="request.total" class='form-control' type='text' name='total'
+          <input [(ngModel)]='request.total' class='form-control' type='text' name='total'
             #total='ngModel' disabled required minlength='5'>
         </div>
         <div *ngIf='total.invalid && total.touched' class='col-form-label col=sm-2 text-danger'>
@@ -87,11 +87,23 @@
           <label *ngIf='total?.errors.minlength'>5 char min</label>
         </div>
     </div>
-      <div class="form-group row">
-        <label class="col-form-label col-sm-2">User:</label>
-        <div class="col-sm-8">
-          <select [(ngModel)]="request.user" class="form-control" name="user"disabled>
-            <option *ngFor="let user of users" [ngValue]="user">{{ user.Name }}</option>
+    <div class='form-group row'>
+      <label class='col-form-label col-sm-2'>Submitted Date:</label>
+      <div class='col-sm-8'>
+        
+        <input [(ngModel)]='request.submittedDate' class='form-control' type='date' name='submittedDate'
+          #submittedDate='ngModel' disabled required minlength='3'>
+      </div>
+      <div *ngIf='submittedDate.invalid && submittedDate.touched' class='col-form-label col=sm-2 text-danger'>
+        <label *ngIf='submittedDate?.errors.required'>Required</label>
+        <label *ngIf='submittedDate?.errors.minlength'>3 char min</label>
+      </div>
+  </div>
+      <div class='form-group row'>
+        <label class='col-form-label col-sm-2'>User:</label>
+        <div class='col-sm-8'>
+          <select [(ngModel)]='request.user' class='form-control' name='user'disabled>
+            <option *ngFor='let user of users' [ngValue]='user'>{{ user.Name }}</option>
           </select>
         </div>
       </div> 
