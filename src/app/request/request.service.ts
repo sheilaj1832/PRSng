@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import {SystemService } from '../system/system.service'
 import { Request } from './request.class';
 import { JsonResponse } from '../util/json-response.class';
 
@@ -26,6 +27,16 @@ export class RequestService {
   }
   remove(request: Request): Observable<JsonResponse> {
     return this.http.post(url + 'Remove', request) as Observable<JsonResponse>;
-  }  
-    constructor(private http: HttpClient) { }
+  }
+  submitreview(id): Observable<JsonResponse> {
+    return this.http.get(url + 'SubmitForReview/' + id) as Observable<JsonResponse>;
+  } 
+  reviews(userid): Observable<JsonResponse> {
+    return this.http.get(url + 'ListReview/' + userid) as Observable<JsonResponse>;
+  }
+
+    constructor(
+      private sys: SystemService,
+      private http: HttpClient
+      ) { }
 }

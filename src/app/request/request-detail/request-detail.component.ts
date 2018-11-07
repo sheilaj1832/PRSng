@@ -13,6 +13,14 @@ export class RequestDetailComponent implements OnInit {
 
   request: Request;
 
+  review(): void {
+    this.requestsvc.submitreview(this.request.id)
+      .subscribe(resp => {
+        console.log('resp:', resp);
+        this.router.navigateByUrl('/purchaserequests/list');
+        });
+      }    
+      
   delete(): void {
     this.requestsvc.remove(this.request)
       .subscribe(resp => {
