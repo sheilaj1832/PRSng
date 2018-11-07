@@ -20,6 +20,8 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestAddComponent } from './request/request-add/request-add.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
+import { RequestReviewDetailComponent } from './request/request-review-detail/request-review-detail.component';
 
 import { LineAddComponent } from './line/line-add/line-add.component';
 import { LineDetailComponent } from './line/line-detail/line-detail.component';
@@ -51,6 +53,8 @@ const routes: Routes = [
   {path: 'purchaserequests/add', component: RequestAddComponent },
   {path: 'purchaserequests/detail/:id', component: RequestDetailComponent },
   {path: 'purchaserequests/edit/:id', component: RequestEditComponent },
+  {path: 'purchaserequests/listReview', component: RequestReviewListComponent },
+  {path: 'purchaserequests/submitForReview', component: RequestReviewDetailComponent },
 
   {path: 'purchaserequestlineitems/list', component: LineListComponent },
   {path: 'purchaserequestlineitems/add', component: LineAddComponent },

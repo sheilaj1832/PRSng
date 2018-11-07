@@ -14,7 +14,7 @@ export class RequestDetailComponent implements OnInit {
   request: Request;
 
   review(): void {
-    this.requestsvc.submitreview(this.request.id)
+    this.requestsvc.submitreview(this.request)
       .subscribe(resp => {
         console.log('resp:', resp);
         this.router.navigateByUrl('/purchaserequests/list');

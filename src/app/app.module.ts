@@ -30,16 +30,14 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestAddComponent } from './request/request-add/request-add.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
+import { RequestReviewDetailComponent } from './request/request-review-detail/request-review-detail.component';
 
 import { LineAddComponent } from './line/line-add/line-add.component';
 import { LineDetailComponent } from './line/line-detail/line-detail.component';
 import { LineEditComponent } from './line/line-edit/line-edit.component';
 import { LineListComponent } from './line/line-list/line-list.component';
 import { LoginComponent } from './user/login/login.component';
-import { ListReviewComponent } from './review/list-review/list-review.component';
-import { SubmitForReviewComponent } from './review/submit-for-review/submit-for-review.component';
-import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
-import { RequestReviewDetailComponent } from './request/request-review-detail/request-review-detail.component';
 
 @NgModule({
   declarations: [
@@ -65,15 +63,14 @@ import { RequestReviewDetailComponent } from './request/request-review-detail/re
     RequestDetailComponent,
     RequestEditComponent,
     RequestAddComponent,
+    RequestReviewListComponent,
+    RequestReviewDetailComponent,
     LineAddComponent,
     LineDetailComponent,
     LineEditComponent,
     LineListComponent,
     LoginComponent,
-    ListReviewComponent,
-    SubmitForReviewComponent,
-    RequestReviewListComponent,
-    RequestReviewDetailComponent,
+
   ],
   imports: [
     BrowserModule,
