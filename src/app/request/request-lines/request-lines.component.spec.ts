@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubmitForReviewComponent } from './submit-for-review.component';
+import { RequestLinesComponent } from './request-lines.component';
 
-describe('SubmitForReviewComponent', () => {
-  let component: SubmitForReviewComponent;
-  let fixture: ComponentFixture<SubmitForReviewComponent>;
+describe('RequestLinesComponent', () => {
+  let component: RequestLinesComponent;
+  let fixture: ComponentFixture<RequestLinesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubmitForReviewComponent ]
+      declarations: [ RequestLinesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SubmitForReviewComponent);
+    fixture = TestBed.createComponent(RequestLinesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

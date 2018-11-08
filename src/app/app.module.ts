@@ -9,10 +9,12 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserLoginComponent } from './user/user-login/user-login.component'
 
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
@@ -30,14 +32,13 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestAddComponent } from './request/request-add/request-add.component';
-import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
-import { RequestReviewDetailComponent } from './request/request-review-detail/request-review-detail.component';
+import { RequestReviewComponent } from './request/request-review/request-review.component';
 
 import { LineAddComponent } from './line/line-add/line-add.component';
 import { LineDetailComponent } from './line/line-detail/line-detail.component';
 import { LineEditComponent } from './line/line-edit/line-edit.component';
 import { LineListComponent } from './line/line-list/line-list.component';
-import { LoginComponent } from './user/login/login.component';
+import { RequestLinesComponent } from './request/request-lines/request-lines.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LoginComponent } from './user/login/login.component';
     UserDetailComponent,
     UserAddComponent,
     UserEditComponent,
+    UserLoginComponent,
     MenuComponent,
     HomeComponent,
     AboutComponent,
@@ -63,13 +65,12 @@ import { LoginComponent } from './user/login/login.component';
     RequestDetailComponent,
     RequestEditComponent,
     RequestAddComponent,
-    RequestReviewListComponent,
-    RequestReviewDetailComponent,
+    RequestReviewComponent,
+    RequestLinesComponent,
     LineAddComponent,
     LineDetailComponent,
     LineEditComponent,
     LineListComponent,
-    LoginComponent,
 
   ],
   imports: [

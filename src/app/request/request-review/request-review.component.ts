@@ -4,11 +4,11 @@ import { RequestService } from '../request.service';
 import { Request } from '../request.class';
 
 @Component({
-  selector: 'app-request-review-list',
-  templateUrl: './request-review-list.component.html',
-  styleUrls: ['./request-review-list.component.css']
+  selector: 'app-request-review',
+  templateUrl: './request-review.component.html',
+  styleUrls: ['./request-review.component.css']
 })
-export class RequestReviewListComponent implements OnInit {
+export class RequestReviewComponent implements OnInit {
 
   requests:  Request [];
 

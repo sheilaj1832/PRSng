@@ -5,6 +5,7 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
@@ -20,15 +21,13 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestAddComponent } from './request/request-add/request-add.component';
-import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
-import { RequestReviewDetailComponent } from './request/request-review-detail/request-review-detail.component';
+import { RequestReviewComponent } from './request/request-review/request-review.component';
 
 import { LineAddComponent } from './line/line-add/line-add.component';
 import { LineDetailComponent } from './line/line-detail/line-detail.component';
 import { LineEditComponent } from './line/line-edit/line-edit.component';
 import { LineListComponent } from './line/line-list/line-list.component';
 
-import { MenuComponent } from './menu/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
@@ -38,6 +37,7 @@ const routes: Routes = [
   {path: 'users/add', component: UserAddComponent },
   {path: 'users/detail/:id', component: UserDetailComponent },
   {path: 'users/edit/:id', component: UserEditComponent },
+  {path: 'users/login/:id', component: UserLoginComponent },
 
   {path: 'vendors/list', component: VendorListComponent },
   {path: 'vendors/add', component: VendorAddComponent },
@@ -53,8 +53,7 @@ const routes: Routes = [
   {path: 'purchaserequests/add', component: RequestAddComponent },
   {path: 'purchaserequests/detail/:id', component: RequestDetailComponent },
   {path: 'purchaserequests/edit/:id', component: RequestEditComponent },
-  {path: 'purchaserequests/listReview', component: RequestReviewListComponent },
-  {path: 'purchaserequests/submitForReview', component: RequestReviewDetailComponent },
+  {path: 'purchaserequests/listreview', component: RequestReviewComponent },
 
   {path: 'purchaserequestlineitems/list', component: LineListComponent },
   {path: 'purchaserequestlineitems/add', component: LineAddComponent },
