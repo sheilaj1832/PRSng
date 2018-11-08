@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { RequestService } from '../request.service';
 import { Request } from '../request.class';
+import { SystemService } from '../../system/system.service'
 
 @Component({
   selector: 'app-request-review',
@@ -12,15 +14,32 @@ export class RequestReviewComponent implements OnInit {
 
   requests:  Request [];
 
-  constructor(private requestsvc: RequestService) { }
+  constructor(
+    private requestsvc: RequestService,
+    private syssvc: SystemService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
-    this.requestsvc.list()
+    this.requestsvc.review(this.syssvc.user)
       .subscribe (resp => {
         console.log('Requests:', resp);
         this.requests = resp.data;
-  
-        });
-    }
-  
+      })
+      this.router.navigateByUrl('purchaserequests/list');
   }
+  approve(request) {
+    this.requestsvc.approve(request)
+      .subscribe(res => {
+      })
+      this.router.navigateByUrl('purchaserequests/list');
+  }
+
+  reject(request) {
+    request.reasonForRejection = prompt("Reason For Rejection?");
+    this.requestsvc.reject(request)
+      .subscribe(res => {
+      })
+      this.router.navigateByUrl('purchaserequests/list');
+  }
+}

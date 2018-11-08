@@ -15,10 +15,10 @@ export class RequestListComponent implements OnInit {
 
   constructor(
     private requestsvc: RequestService,
-    private systemsvc: SystemService) { }
+    private syssvc: SystemService) { }
   
     ngOnInit() {
-      this.systemsvc.checkForLogin();
+      this.syssvc.checkForLogin();
       this.requestsvc.list()
         .subscribe(resp => {
           console.log("Requests:", resp);

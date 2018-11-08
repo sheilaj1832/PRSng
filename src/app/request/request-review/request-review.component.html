@@ -25,9 +25,13 @@
   <td>{{ request.status }}</td>
   <td>{{ request.user.userName }}</td>
   <td>
-    <a routerLink='/purchaserequests/detail/{{ request.id }}'>Detail</a>
+    <a routerLink='/purchaserequests/list/'(click)='approve(request)'>Approve</a>
+    <button class='btn btn-primary' (click)='approve(request)'>Save</button>
+    | <a routerLink='/purchaserequests/list/'(click)='reject(request)'>Reject</a> 
   </td> 
 </tr>
 </tbody>
 </table>
 </div>
+
+
