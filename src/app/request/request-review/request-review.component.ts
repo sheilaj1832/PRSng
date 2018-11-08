@@ -30,15 +30,15 @@ export class RequestReviewComponent implements OnInit {
   }
   approve(request) {
     this.requestsvc.approve(request)
-      .subscribe(res => {
+      .subscribe(resp => {
       })
       this.router.navigateByUrl('purchaserequests/list');
   }
 
   reject(request) {
-    request.reasonForRejection = prompt("Reason For Rejection?");
+    request.reasonForRejection = prompt("Rejection Reason?");
     this.requestsvc.reject(request)
-      .subscribe(res => {
+      .subscribe(resp => {
       })
       this.router.navigateByUrl('purchaserequests/list');
   }
