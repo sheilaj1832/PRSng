@@ -36,7 +36,7 @@ export class RequestReviewComponent implements OnInit {
   }
 
   reject(request) {
-    request.reasonForRejection = prompt("Rejection Reason?");
+    request.reasonForRejection = prompt('Rejection Reason?');
     this.requestsvc.reject(request)
       .subscribe(resp => {
       })

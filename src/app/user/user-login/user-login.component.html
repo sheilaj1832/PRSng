@@ -12,7 +12,7 @@
             <input [(ngModel)]='user.userName' class='form-control' type='text' name='userName'
               #userName='ngModel' required minlength='1'>
           </div>
-          <div *ngIf='userName.invalid && id.touched' class='col-form-label col=sm-2 text-danger'>
+          <div *ngIf='userName.invalid && userName.touched' class='col-form-label col=sm-2 text-danger'>
             <label *ngIf='userName?.errors.required'>Required</label>
             <label *ngIf='userName?.errors.minlength'>1 char min</label>
           </div>
