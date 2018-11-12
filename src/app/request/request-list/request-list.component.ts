@@ -21,7 +21,7 @@ export class RequestListComponent implements OnInit {
       this.syssvc.checkForLogin();
       this.requestsvc.list()
         .subscribe(resp => {
-          console.log("Requests:", resp);
+          console.log('Requests:', resp);
           this.requests = resp.data;
         });
     }

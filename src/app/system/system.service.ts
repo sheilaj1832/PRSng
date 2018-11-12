@@ -21,8 +21,8 @@ export class SystemService {
   }
   checkForLogin() {
     if(!this.isLoggedIn) {
-      console.warn("CheckForLogin()");
-      this.router.navigateByUrl("/users/login");
+      console.warn('CheckForLogin()');
+      this.router.navigateByUrl('/users/login');
     }
   }
 

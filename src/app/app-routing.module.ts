@@ -32,7 +32,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/users/login', pathMatch: 'full'},
   {path: 'users/list', component: UserListComponent },
   {path: 'users/add', component: UserAddComponent },
   {path: 'users/detail/:id', component: UserDetailComponent },
