@@ -30,7 +30,7 @@ export class RequestService {
     return this.http.post(url + 'Remove', request) as Observable<JsonResponse>;
   }
   review(user: User): Observable<JsonResponse> {
-    return this.http.post(url + 'ListReview/', user) as Observable<JsonResponse>;
+    return this.http.post(url + 'listreview/', user) as Observable<JsonResponse>;
   } 
   submitreview(request: Request): Observable<JsonResponse> {
     return this.http.post(url + 'SubmitForReview/', request) as Observable<JsonResponse>;
