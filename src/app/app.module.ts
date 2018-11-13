@@ -38,7 +38,6 @@ import { LineAddComponent } from './line/line-add/line-add.component';
 import { LineDetailComponent } from './line/line-detail/line-detail.component';
 import { LineEditComponent } from './line/line-edit/line-edit.component';
 import { LineListComponent } from './line/line-list/line-list.component';
-import { RequestLinesComponent } from './request/request-lines/request-lines.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +65,6 @@ import { RequestLinesComponent } from './request/request-lines/request-lines.com
     RequestEditComponent,
     RequestAddComponent,
     RequestReviewComponent,
-    RequestLinesComponent,
     LineAddComponent,
     LineDetailComponent,
     LineEditComponent,
