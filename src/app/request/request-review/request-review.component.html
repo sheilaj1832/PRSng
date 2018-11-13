@@ -12,6 +12,7 @@
   <td>Delivery Mode</td>
   <td>Status</td>
   <td>User</td>
+  <td>Total</td>
   <td>Action</td>
 </tr>
 </thead>
@@ -24,9 +25,9 @@
   <td>{{ request.deliveryMode }}</td>
   <td>{{ request.status }}</td>
   <td>{{ request.user.userName }}</td>
+  <td>{{ request.total | currency }}</td>
   <td>
     <a routerLink='/purchaserequests/list/'(click)='approve(request)'>Approve</a>
-    <button class='btn btn-primary' (click)='approve(request)'>Save</button>
     | <a routerLink='/purchaserequests/list/'(click)='reject(request)'>Reject</a> 
   </td> 
 </tr>

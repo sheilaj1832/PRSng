@@ -23,11 +23,11 @@ export class RequestReviewComponent implements OnInit {
   ngOnInit() {
     this.requestsvc.review(this.syssvc.user)
       .subscribe (resp => {
-        console.log('Requests:', resp);
-        this.requests = resp.data;
+          this.requests = resp.data;
+          console.log(this.syssvc.user)
       })
-      this.router.navigateByUrl('purchaserequests/list');
   }
+  
   approve(request) {
     this.requestsvc.approve(request)
       .subscribe(resp => {
