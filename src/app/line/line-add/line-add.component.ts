@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { LineService } from '../line.service';
 import { Line } from '../line.class';
@@ -31,7 +31,8 @@ export class LineAddComponent implements OnInit {
     private linesvc: LineService,
     private requestsvc: RequestService,
     private productsvc: ProductService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
     ) { }
 
     ngOnInit() {
@@ -45,6 +46,14 @@ export class LineAddComponent implements OnInit {
           console.log("Requests:", resp);
           this.request = resp.data;
         });
+      }
+    create() {
+      this.linesvc.add(this.line)
+        .subscribe(resp => {
+          if(resp.code != 0){
+          alert('Save Failure');
+        }
+        this.router.navigateByUrl('/purchaserequests/list');
+      })
   }
-
 }

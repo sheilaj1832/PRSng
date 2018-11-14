@@ -12,11 +12,14 @@ const url = 'http://localhost:8080/PurchaseRequestLineItems/';
 })
 export class LineService {
 
+  login(line: Line): Observable<JsonResponse> {
+		return this.http.post(url+"Authenticate", line) as Observable<JsonResponse>;
+  }
   list(): Observable<JsonResponse> {
     return this.http.get(url + 'List') as Observable<JsonResponse>;
   }
   get(id): Observable<JsonResponse> {
-    return this.http.get(url + 'Get/' + id) as Observable<JsonResponse>;
+    return this.http.get(url + 'Get/Line/' + id) as Observable<JsonResponse>;
   }
   add(line: Line): Observable<JsonResponse> {
     return this.http.post(url + 'Add', line) as Observable<JsonResponse>;
@@ -26,6 +29,9 @@ export class LineService {
   }
   remove(line: Line): Observable<JsonResponse> {
     return this.http.post(url + 'Remove', line) as Observable<JsonResponse>;
-  }  
-    constructor(private http: HttpClient) { }
-}
+  }
+  getPrli(id): Observable<JsonResponse> {
+     return this.http.get(url+"Get/Prli/"+id) as Observable<JsonResponse>;
+    }
+  constructor(private http: HttpClient) { }
+  }
