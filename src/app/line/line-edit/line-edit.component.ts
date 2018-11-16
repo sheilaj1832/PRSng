@@ -17,7 +17,6 @@ export class LineEditComponent implements OnInit {
 
   line: Line;
   products: Product[];
-  requests: Request[];
 
   save(): void {
     this.linesvc.change(this.line)
@@ -30,7 +29,6 @@ export class LineEditComponent implements OnInit {
   constructor(
     private linesvc: LineService,
     private productsvc: ProductService,
-    private requestsvc: RequestService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -48,10 +46,6 @@ export class LineEditComponent implements OnInit {
         console.log('resp:', resp);
         this.products = resp.data;
       });
-      this.requestsvc.list()
-      .subscribe(resp => {
-        console.log('resp:', resp);
-        this.requests = resp.data;
-      });
+    };
   }
-}
+  

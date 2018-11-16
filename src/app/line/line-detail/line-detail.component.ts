@@ -37,6 +37,11 @@ export class LineDetailComponent implements OnInit {
        });
     }
   
+    remove(): void {
+      this.linesvc.remove(this.line)
+        .subscribe(resp => {
+          this.router.navigateByUrl("/purchaserequests/list");
+        });
+    }
+  
   }
-  
-  

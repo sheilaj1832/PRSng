@@ -18,13 +18,14 @@ export class LineAddComponent implements OnInit {
   line: Line = new Line();
   products: Product[];
   request: Request [];
+  purchaseRequestID: number;
 
 
   save(): void {
     this.linesvc.add(this.line)
       .subscribe(resp => {
         console.log('resp', resp);
-        this.router.navigateByUrl('/purhaserequestlineitems/list');
+        this.router.navigateByUrl('/purchaserequestlineitems/list/');
       })
   }
   constructor(
@@ -38,22 +39,20 @@ export class LineAddComponent implements OnInit {
     ngOnInit() {
       this.productsvc.list()
         .subscribe(resp => {
-          console.log("Products:", resp);
+          console.log('Products:', resp);
           this.products = resp.data;
         });
-        this.requestsvc.list()
-        .subscribe(resp => {
-          console.log("Requests:", resp);
-          this.request = resp.data;
-        });
-      }
+        this.requestsvc.get(this.route.snapshot.params.id)
+        .subscribe(resp => 
+          this.line.request = resp.data);
+        };
+
     create() {
       this.linesvc.add(this.line)
         .subscribe(resp => {
-          if(resp.code != 0){
-          alert('Save Failure');
-        }
-        this.router.navigateByUrl('/purchaserequests/list');
+          console.log('resp', resp);
+          this.router.navigateByUrl('/purchaserequestlineitems/list'+ this.request.id );
       })
   }
 }
+
