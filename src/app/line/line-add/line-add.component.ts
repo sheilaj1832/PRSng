@@ -51,8 +51,9 @@ export class LineAddComponent implements OnInit {
       this.linesvc.add(this.line)
         .subscribe(resp => {
           console.log('resp', resp);
-          this.router.navigateByUrl('/purchaserequestlineitems/list'+ this.request.id );
+          this.router.navigateByUrl('/purchaserequests/list');
+
       })
   }
-}
 
+}
