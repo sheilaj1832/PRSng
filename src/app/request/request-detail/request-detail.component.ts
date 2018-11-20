@@ -13,7 +13,7 @@ export class RequestDetailComponent implements OnInit {
 
   request: Request;
 
-  review(): void {
+  subreview(): void {
     this.requestsvc.submitreview(this.request)
       .subscribe(resp => {
         console.log('resp:', resp);
@@ -46,4 +46,3 @@ export class RequestDetailComponent implements OnInit {
   }
 
 }
-
