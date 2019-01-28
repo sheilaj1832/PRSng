@@ -19,24 +19,24 @@ export class RequestDetailComponent implements OnInit {
         console.log('resp:', resp);
         this.router.navigateByUrl('/purchaserequests/listreview');
         });
-      }    
-      
+      }
+
   delete(): void {
     this.requestsvc.remove(this.request)
       .subscribe(resp => {
         console.log('resp:', resp);
         this.router.navigateByUrl('/purchaserequests/listreview');
         });
-      } 
+      }
 
   constructor(
-    private requestsvc: RequestService, 
+    private requestsvc: RequestService,
     private route: ActivatedRoute,
     private router: Router
     ) { }
 
   ngOnInit() {
-    let id = this.route.snapshot.params.id;
+    const id = this.route.snapshot.params.id;
 
     this.requestsvc.get(id)
      .subscribe(resp => {
@@ -44,5 +44,4 @@ export class RequestDetailComponent implements OnInit {
        this.request = resp.data;
      });
   }
-
 }

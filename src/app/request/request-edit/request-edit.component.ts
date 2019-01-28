@@ -35,7 +35,7 @@ export class RequestEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let id = this.route.snapshot.params.id;
+    const id = this.route.snapshot.params.id;
     this.requestsvc.get(id)
       .subscribe(resp => {
         console.log('resp', resp);
